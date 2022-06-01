@@ -78,8 +78,8 @@ WSGI_APPLICATION = 'german_blog.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 
-
-DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"), conn_max_age=600)}
+conn = os.environ.get("DATABASE_URL", 'sqlite:///db.sqlite3')
+DATABASES = {"default": dj_database_url.parse(conn, conn_max_age=600)}
 
 
 # Password validation
