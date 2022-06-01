@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get( "SECRET_KEY" , 'mysupersecretkey')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ["coderhouse-blog.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = [os.environ.get("ALLOWED_HOST"), "localhost"]
 
 
 # Application definition
